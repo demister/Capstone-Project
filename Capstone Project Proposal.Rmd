@@ -8,6 +8,7 @@ output:
 ---
 
 Idea 1
+
 ##Can Numerology be used to predict your probability of being involved in an air crash?
 
 Background:
@@ -20,7 +21,7 @@ Problem Statement:
 
 Data:
 
-This analysis is made possible due to the diligent work of Mr. Sauro Grandi. His data can be assed athttps://www.kaggle.com/saurograndi/airplane-crashes-since-1908/kernels-
+This analysis is made possible due to the diligent work of Mr. Sauro Grandi. His data can be assed at https://www.kaggle.com/saurograndi/airplane-crashes-since-1908/kernels-
 
 
 Approach:
