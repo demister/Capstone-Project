@@ -55,9 +55,6 @@ Deliverables:
 ## Do auto manufactures proactively or reactively change fuel efficiency?
 
 
-
-##Do auto manufactures proactively or reactively change fuel efficiency?
-
 Background:
 
 A comparison will be made between historic crude oil prices and the MPG changes of different manufacturers. The study will also try and quantify who among the manufactures have been the most sensitive to customer's operational expenditure. 
