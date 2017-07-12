@@ -7,7 +7,8 @@ output:
   pdf_document: default
 ---
 
-Idea 1
+##Idea 1
+
 
 ##Can Numerology be used to predict your probability of being involved in an air crash?
 
@@ -35,7 +36,8 @@ Clean data:
 
 Quantify Values :
 
-  -	Add the dates to arrive at birth numbers
+
+-	Add the dates to arrive at birth numbers
   -	Add registrations to arrive at name numbers
   -	Statistical analysis
 
@@ -50,9 +52,12 @@ Deliverables:
   -	Original data set, Cleaned dataset, Code and Presentation 
 
 ## Idea 2
+
+
+
 ##Do auto manufactures proactively or reactively change fuel efficiency?
 
-##Background:
+Background:
 
 A comparison will be made between historic crude oil prices and the MPG changes of different manufacturers. The study will also try and quantify who among the manufactures have been the most sensitive to customer's operational expenditure. 
 
