@@ -1,4 +1,4 @@
-Executive Summary
+## Executive Summary
 
 
 Note: Detailed project proposal can be found in the .rmd file.  
