@@ -1,0 +1,137 @@
+---
+title: 'Capstone Project Proposal'
+author: "Dee Muralidharan"
+date: "July 10, 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+##Idea 1
+## Can Numerology be used to predict your probability of being involved in an air crash?
+
+Background:
+
+Numerology is the study of numbers and has been used by many occultists to portend the future. Numerologists believe in repetition of events and that it is predictable. The predictability of an event's occurrence is based on the birth path number, indexed from numbers one to nine. This index, the birth path number, is computed by a series of summations of the individual digits of the dates until the result is simplified to a single digit. For example, the birth path number of July/7/2017 is (7+7+2+0+1+7=24 simplifying further, 2+4 = 6).  The other variable that is used by numerologists, name number, is the name of a person, each alphabet in the name has a unique value for Ex. A = 1, translating this to a plane would be its registration number. By combining the two information and using the data from all the crashes that have occurred, one can pick the worst and the best dates of travel on plane with a certain registration. 
+	
+Problem Statement:
+  
+  Predict the best dates of travel based on the birth path number of your date of travel and the registration of your aircraft. Both Latin and Indian methodology will be used to predict the best and the worst dates of travel. 
+
+Data:
+
+This analysis is made possible due to the diligent work of Mr. Sauro Grandi. His data can be assed athttps://www.kaggle.com/saurograndi/airplane-crashes-since-1908/kernels-
+
+
+Approach:
+
+Clean data:
+
+  -	Remove rows NA's
+  -	Organize dates
+  -	String manipulations for Registration numbers
+  -	Date manipulations to arrive at birth numbers
+
+Quantify Values :
+
+  -	Add the dates to arrive at birth numbers
+  -	Add registrations to arrive at name numbers
+  -	Statistical analysis
+
+Data Presentation :
+
+  -	Fatalities by date of travel
+  -	Fatalities by name number
+  -	Worst and the best combination for travel based on your flight date and your registration. 
+  
+Deliverables:
+
+  -	Original data set, Cleaned dataset, Code and Presentation 
+
+## Idea 2
+
+##Do auto manufactures proactively or reactively change fuel efficiency?
+
+##Background:
+
+A comparison will be made between historic crude oil prices and the MPG changes of different manufacturers. The study will also try and quantify who among the manufactures have been the most sensitive to customer's operational expenditure. 
+
+##Problem Statement:
+	
+Quantify the influence of gas price on MPG of vehicles introduced
+
+##Data: 
+
+  The MPG dataset will be obtained from https://www.kaggle.com/uciml/autompg-dataset -    A collection by UCI Machine Learning
+
+The data on crude oil prices and behavior can be obtained from https://ourworldindata.org/energy-production-and-changing-energy-sources/
+
+##Approach: 
+
+Clean data
+
+  -	Remove NA's and odd characters
+  -	Collate data based on the year
+  -	Smoothen the data for crude oil prices
+  -	String manipulations 
+  -	Combining the data from both the tables
+
+Quantify Values:
+  -	Statistical 
+  -	Coding to quantify year wise results
+
+Data Presentation:
+  -	Manufacturer wise result 
+
+Deliverables:
+
+  -	Original data set, Cleaned dataset, Code and Presentation 
+
+## Idea 3
+
+
+## Ideate to check the correlation between unemployment rate and obesity?
+
+Background:
+
+An attempt will be made to ascertain the correlation between unemployment rate and childhood 
+obesity.
+
+Problem Statement:
+
+	Quantify the influence of unemployment and its effects on obesity
+
+Data: 
+
+The unemployment rate dataset will be obtained from https://www.kaggle.com/stansilas/maps-are-beautiful-unemployment-is-not/data - A collection by Mr Vivek Mangipudi
+
+The data on nutrition and behavior can be obtained from https://chronicdata.cdc.gov/Nutrition-Physical-Activity-and-Obesity/Nutrition-Physical-Activity-and-Obesity-Behavioral/hn4x-zwk7/data
+
+Approach: 
+
+  In consultation with my mentor pick the states that will be the focus of the study. The criteria for picking states can be based on for Ex. 
+  A.	Geographic - Warm vs. Cold
+  B.	Way of life- Conservative vs. Liberal
+  C.	Predominant Occupation- Services vs Physical Labor
+
+Clean data
+
+  -	Remove NA's and odd characters
+  -	Filter out data that do not belong to the target states.
+  -	String manipulations 
+  -	Combining the data from both the tables
+  -	Correlate the data by geo-location
+
+Quantify Values:
+  -	Statistical 
+  -	Coding to quantify state wise results
+
+Data Presentation:
+
+  -	State wide results 
+
+Deliverables:
+
+-	Original data set, Cleaned dataset, Code and Presentation 
+
+
