@@ -7,8 +7,8 @@ output:
   pdf_document: default
 ---
 
-##Idea 1
-## Can Numerology be used to predict your probability of being involved in an air crash?
+Idea 1
+##Can Numerology be used to predict your probability of being involved in an air crash?
 
 Background:
 
@@ -49,7 +49,6 @@ Deliverables:
   -	Original data set, Cleaned dataset, Code and Presentation 
 
 ## Idea 2
-
 ##Do auto manufactures proactively or reactively change fuel efficiency?
 
 ##Background:
