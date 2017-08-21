@@ -1,0 +1,49 @@
+---
+title: "QUANTIFY THE INFLUENCE OF UNEMPLOYMENT ON  ADULT OBESITY "
+author: "Dee Muralidharan"
+date: "July 28, 2017"
+output: html_document
+---
+
+## Capstone Project
+
+	This project is intended to study the causal relationship between unemployment and obesity. Two data sets will be utilized to perform this study.  The project is intended for law-makers , health advocates, public policy planners and anyone interested in this causal relationship. The project will study the data to answer the questions below 
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggmap)
+library(zipcode)
+library(mapproj)
+library(RDSTK)
+library(reshape)
+library(data.table)
+```
+
+##File Diabetes Prevelance
+
+Read the file "Diabetes prevelance.csv" and clean up rows that have 
+
+```{r}
+setwd("D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive")
+
+diabetes_prevelance <- read.csv("D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive/Diabetes prevelance.csv", header = TRUE, stringsAsFactors = FALSE)
+
+diabetes_prevelance
+```
+ 
+Remove rows with no data
+```{r}
+diabetes_prevelance1<- diabetes_prevelance %>% filter(number != ("No Data"))
+diabetes_prevelance1 <- diabetes_prevelance1 %>% select(-contains("confidence.limit"))
+setnames(diabetes_prevelance1, old=c("number.1","number.2","number.3","number.4","number.5","number.6","number.7","number.8","number.9"),new= c("number","number","number","number","number","number","number","number","number"))
+setnames(diabetes_prevelance1, old=c("age.adjusted.percent.1","age.adjusted.percent.2","age.adjusted.percent.3","age.adjusted.percent.4","age.adjusted.percent.5","age.adjusted.percent.6","age.adjusted.percent.7","age.adjusted.percent.8", "age.adjusted.percent.9"),new=c("age.adjusted.percent","age.adjusted.percent","age.adjusted.percent","age.adjusted.percent","age.adjusted.percent","age.adjusted.percent","age.adjusted.percent","age.adjusted.percent","age.adjusted.percent" ))
+setnames(diabetes_prevelance1, old=c("percent.1","percent.2","percent.3","percent.4","percent.5","percent.6","percent.7","percent.8","percent.9"),new= c("percent","percent","percent","percent","percent","percent","percent","percent","percent"))
+##write.csv(diabetes_prevelance1, "D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive/R write/diabetes_prevelance1.csv")
+
+diabetes_prevelance1<- melt (diabetes_prevelance1, id.var=1:4)
+##diabetes_prevelance1 <- melt(diabetes_prevelance1,id= 1:4, measured = c("number",	"percent", 	"age.adjusted.percent",	"number","percent",	"age.adjusted.percent"))
+write.csv(diabetes_prevelance1, "D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive/R write/diabetes_prevelance1.csv")
+```
+
