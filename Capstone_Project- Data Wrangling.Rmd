@@ -1,0 +1,59 @@
+---
+title: "QUANTIFY THE INFLUENCE OF UNEMPLOYMENT ON  ADULT OBESITY "
+author: "Dee Muralidharan"
+date: "July 28, 2017"
+output: html_document
+---
+
+## Capstone Project
+
+	This project is intended to study the causal relationship between unemployment and obesity. Two data sets will be utilized to perform this study.  The project is intended for law-makers , health advocates, public policy planners and anyone interested in this causal relationship. The project will study the data to answer the questions below 
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggmap)
+library(zipcode)
+library(mapproj)
+library(RDSTK)
+library(reshape)
+library(data.table)
+```
+
+##File Diabetes Prevelance
+
+Read the file "Diabetes prevelance.csv" and clean up to confirm with the obesity file. 
+
+```{r}
+setwd("D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive")
+
+diabetes_prevelance <- read.csv("D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive/Diabetes prevelance.csv", header = TRUE, stringsAsFactors = FALSE)
+
+diabetes_prevelance
+```
+ 
+Remove rows with no data, Melt data into one big group such that all the columns are converted to rows and are listed as sub-categories. This set of code is used to factorise all the data in the Diabetes prevelance File
+
+```{r}
+diabetes_prevelance1<- diabetes_prevelance %>% filter(number.2004 != ("No Data"))
+diabetes_prevelance1 <- diabetes_prevelance1 %>% select(-contains("confidence.limit"))
+write.csv(diabetes_prevelance1, "D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive/R write/diabetes_prevelance1.csv")
+diabetes_prevelance1<- melt (diabetes_prevelance1, id.var=1:4)
+## Filter rows that have NA and rows that contain x.1
+diabetes_prevelance1<- diabetes_prevelance1 %>% filter(variable != ("X.1")) %>% select (-contains("X"))
+write.csv(diabetes_prevelance1, "D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive/R write/diabetes_prevelance1.csv")
+```
+
+In this section the next file will be sorted is the "leasiure_time_phy_inactivity.csv".
+
+```{r}
+setwd("D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive")
+leasiure_time_phy_in <- read.csv("leasiure_time_phy_inactivity.csv", header = TRUE, stringsAsFactors = FALSE)
+## Remove columns that contain "confidence limit"
+leasiure_time_phy_in <- leasiure_time_phy_in %>% select(-contains("confidence.limit")) %>% filter(number.2004 != ("No Data")) %>%  filter(percent.2009 != ("No Data"))
+leasiure_time_phy_in <- melt (leasiure_time_phy_in, id.var=1:4)
+write.csv(leasiure_time_phy_in, "D:/springboard Data science/Capstone Project/Final Pick/Rmarkdown Home Drive/R write/leasiure_time_phy_in.csv")
+
+```
+
